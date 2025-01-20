@@ -1,0 +1,43 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("ADVANCE MOBILE COMPUTING");
+  const bodyText = 'Im Kherleen Mae Estrecho. As BSIT Student in Global Reciprocal College. In my Sysarch 1 And Sysarch 2:Sysarch1 Role: We having a little hard time as a student is a liitle hard to choose a title. And it took us a lot of time. So as much as possoble we ,uch find a company and tile. As my role I need to contact my cousin since he is graduated as BSIT student in GLOBAL RECIPROCAL COLLEGE. And that is were we find the company and it located in Navotas.SYSARCH2 ROLE: In our next SYSARCH we conduct a lot of reseach and we used a HTML,JAVA,DBMS and at the ens of defense we made it final.';
+  
+
+  const onPressTitle = () => {
+    setTitleText("ACTIVITY 3");
+  };
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text>
+          <Text numberOfLines={20}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});
+
+export default TextInANest;
