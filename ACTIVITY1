@@ -1,0 +1,40 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView
+    style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 100
+        }}>
+      <View
+        style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+
+        }}>
+        <Text>rose</Text>
+        <Text>flowers</Text>
+        <Image
+          source={{
+            uri: 'https://tse3.mm.bing.net/th?id=OIP.UNFjHy0rJ9fBijTaHXTHBAHaHa&rs=1&pid=ImgDetMain',
+          }}
+          style={{width: 300, height: 250, marginBottom: 60}}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1,
+          
+        }}
+        defaultValue="Available!"
+      />
+    </ScrollView>
+  );
+};
+
+export default App;
